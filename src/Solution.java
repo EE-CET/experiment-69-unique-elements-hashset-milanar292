@@ -1,19 +1,23 @@
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
-public class Solution {
+public class UniqueElementsHashSet {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // TODO: Read the integer N
-        
-        // TODO: Create a HashSet to store the integers
-        
-        // TODO: Loop N times to read the integers and add them to the HashSet
-        
-        // TODO: Iterate through the HashSet and print the unique numbers (space-separated)
-        
-        scanner.close();
+        Scanner sc = new Scanner(System.in);
+
+        // Read N
+        int N = sc.nextInt();
+
+        // Create HashSet to store unique numbers
+        HashSet<Integer> set = new HashSet<>();
+
+        // Read N integers and add to HashSet
+        for(int i = 0; i < N; i++) {
+            set.add(sc.nextInt());
+        }
+
+        // Print unique elements
+        for(int num : set) {
+            System.out.print(num + " ");
+        }
     }
 }
