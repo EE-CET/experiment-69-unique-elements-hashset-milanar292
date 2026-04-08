@@ -1,19 +1,21 @@
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // TODO: Read the integer N
-        
-        // TODO: Create a HashSet to store the integers
-        
-        // TODO: Loop N times to read the integers and add them to the HashSet
-        
-        // TODO: Iterate through the HashSet and print the unique numbers (space-separated)
-        
-        scanner.close();
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+
+        // Use LinkedHashSet to keep input order
+        LinkedHashSet<Integer> set = new LinkedHashSet<>();
+
+        for (int i = 0; i < N; i++) {
+            set.add(sc.nextInt());
+        }
+
+        // Print unique elements
+        for (int num : set) {
+            System.out.print(num + " ");
+        }
     }
 }
