@@ -1,22 +1,20 @@
 import java.util.*;
 
-public class UniqueElementsHashSet {
+public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Read N
         int N = sc.nextInt();
 
-        // Create HashSet to store unique numbers
-        HashSet<Integer> set = new HashSet<>();
+        // Use LinkedHashSet to keep input order
+        LinkedHashSet<Integer> set = new LinkedHashSet<>();
 
-        // Read N integers and add to HashSet
-        for(int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
             set.add(sc.nextInt());
         }
 
         // Print unique elements
-        for(int num : set) {
+        for (int num : set) {
             System.out.print(num + " ");
         }
     }
